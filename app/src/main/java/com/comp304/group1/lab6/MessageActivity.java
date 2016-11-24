@@ -168,6 +168,7 @@ public class MessageActivity extends Activity {
     public void sendMessage(View v)
     {
         eText = (EditText) findViewById(R.id.editText);
+        //In emulator, can only send one way (i.e first device to second) and not vice versa
         sendSMS("5556", eText.getText().toString());
         textMessage.setText(textMessage.getText()+"\n"+ eText.getText());
 
